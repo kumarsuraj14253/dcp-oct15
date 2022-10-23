@@ -1,0 +1,54 @@
+#Jenkins Master Slave Configuration: 
+
+#Launch New AWS Linux Instances
+
+#Jenkins Master, ##Node1
+#Launch AWS Linux Instance with port 8080 & Name Tag
+#Update the Instance
+
+#Execute only in Master:
+
+#Jenkins Installation Steps:
+#Launch AWS Linux Instance with port 8080 & Name Tag
+#Update the Instance
+
+sudo -i
+
+yum update -y
+
+#Install Jenkins : ### For ref.: https://www.jenkins.io/download/
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+#Install epel Package:
+amazon-linux-extras install epel
+
+#Install Java: 
+amazon-linux-extras install java-openjdk11
+
+yum install jenkins 
+
+#Start Jenkins:
+
+# Start jenkins service
+#service jenkins start
+#systemctl 
+
+
+#Setup Jenkins to start at boot,
+#chkconfig jenkins on
+
+systemctl status jenkins
+
+systemctl enable jenkins
+
+systemctl start jenkins
+
+#systemctl enable tomcat
+#systemctl start tomcat
+
+### Open new Browser using <public-ip-addr>:8080
+#eg.:http://13.234.112.31:8080/
+
+### And follow the instructions to configure and install suggested plugins and start with Jenkins User Interface.
