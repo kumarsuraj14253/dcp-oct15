@@ -1,0 +1,66 @@
+git, jenkins, ansible, docker, k8s, tf
+
+Jenkins Module:
+	src chkout, perform build, create artifacts, deploy to qa server 
+	
+Ansible :
+
+created the playbook!!!
+
+root > passwd devopsadmin 
+
+CI/CD 
+
+DevOps Projects!!!
+
+	- Onboarding Appln. to DevOps 
+	- Connect with all the stakeholders - 
+	- Perform DevOps Assessment!
+	- Comeup with the recommendations!
+	- Reviewed by the clients & approve
+	- Create the Team, DevOps Tool enablement
+	- Creating the CI-CD pipeline Templates
+	- Will be shared with the teams along with detailed KT
+	
+	
+Creating the CI-CD pipeline Templates :::
+
+	- Jenkins 					groovy scripts & shell scripts
+	- Azure DevOps services		yaml scripts 
+		- Az Pipelines
+	- AWS Pipelines
+
+python scripts 
+CF Templates 
+Terraform
+
+
+****
+Groovy, yaml script docs, python docs.
+
+Jenkins Master 	(windows)
+	Jenkins Slave(aws) 	- Build Server -- build the mvn app, create artifacts, create docker build(image) 
+								   -- Publish the image to Docker hub, use kubernetes to deploy.
+
+Ansible just for config. 
+	
+	
+Use - 
+Jfrog Artifactory
+
+GIT ==> version ctrl the src. v1.0, v1.1
+
+mvn-hello-world.war-v1.0
+mvn-hello-world.war-v1.1 
+
+
+CI / C-Delivery
+
+SRC, build the mvn app, create artifacts, publish artifacts to jfrog_artifactory, 
+
+Code Quality Check! 
+	Sonarqube Analyzer --> Code Quality, Quality Gates -- Coding standards, Code Coverage(Sonarqube & Unit Test CC)
+
+pull that artifacts from jfrog_artifactory, create docker image, publish to docker hub
+
+Use Kubernetes and deploy the pods in any target envi. (Namespaces - DEV,QA,UAT) PROD
